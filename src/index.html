@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tailwindcss exercise project</title>
+  </head>
+  <body class="bg-[#E5E5E5]">
+    <div class="p-4 lg:p-10 relative">
+      <!-- header -->
+      <div
+        class="flex justify-between items-start lg:max-w-[1280px] lg:mx-auto"
+      >
+        <div>
+          <h1 class="text-4xl text-gray-800 tracking-widest">Start Now</h1>
+          <p class="text-4xl text-gray-800 tracking-widest">
+            for <span class="font-bold text-black">free plan</span>
+          </p>
+        </div>
+        <button
+          id="login"
+          class="
+            text-white
+            bg-primary
+            py-2
+            px-4
+            tracking-widest
+            rounded-sm
+            duration-100
+            ring-primary ring-offset-2
+            active:ring-primary-dark active:ring-4
+          "
+        >
+          LOGIN
+        </button>
+      </div>
+
+      <!-- main -->
+      <div
+        class="
+          mt-8
+          lg:grid
+          grid-cols-3
+          gap-8
+          lg:max-w-[1280px] lg:mx-auto
+          justify-evenly
+        "
+      >
+        <div
+          class="
+            w-full
+            bg-secondary
+            rounded-lg
+            p-8
+            mt-8
+            hover:scale-[1.02]
+            duration-300
+            shadow-2xl
+          "
+        >
+          <p class="text-3xl font-bold">
+            Free $0
+            <span class="text-base text-gray-600 font-medium">per month</span>
+          </p>
+          <div class="w-[30px] h-[3px] bg-primary mt-4"></div>
+
+          <ul id="list1" class="mb-20 text-lg"></ul>
+
+          <a href="#" class="w-full mb-8 block font-bold text-center"
+            >view all the feature</a
+          >
+          <button
+            class="
+              w-full
+              bg-primary
+              rounded-lg
+              py-3
+              text-lg text-white
+              tracking-widest
+            "
+          >
+            Subscribe
+          </button>
+        </div>
+
+        <div
+          class="
+            w-full
+            bg-primary
+            rounded-lg
+            p-8
+            mt-8
+            hover:scale-[1.02]
+            duration-300
+            shadow-2xl
+          "
+        >
+          <p class="text-3xl font-bold text-white">
+            Standard $50
+            <span class="text-base font-medium">per month</span>
+          </p>
+          <div class="w-[30px] h-[3px] bg-white mt-4"></div>
+
+          <ul id="list2" class="mb-20 text-lg text-white"></ul>
+
+          <a href="#" class="w-full mb-8 block font-bold text-center text-white"
+            >view all the feature</a
+          >
+          <button
+            class="
+              w-full
+              bg-secondary
+              rounded-lg
+              py-3
+              text-lg text-primary
+              tracking-widest
+            "
+          >
+            Subscribe
+          </button>
+        </div>
+
+        <div
+          class="
+            w-full
+            bg-secondary
+            rounded-lg
+            p-8
+            mt-8
+            hover:scale-[1.02]
+            duration-300
+            shadow-2xl
+          "
+        >
+          <p class="text-3xl font-bold">
+            Pro $90
+            <span class="text-base text-gray-600 font-medium">per month</span>
+          </p>
+          <div class="w-[30px] h-[3px] bg-primary mt-4"></div>
+
+          <ul id="list3" class="mb-20 text-lg"></ul>
+
+          <a href="#" class="w-full mb-8 block font-bold text-center"
+            >view all the feature</a
+          >
+          <button
+            class="
+              w-full
+              bg-primary
+              rounded-lg
+              py-3
+              text-lg text-white
+              tracking-widest
+            "
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+      <!-- modal -->
+      <div
+        id="modal"
+        class="
+          w-full
+          h-full
+          bg-black/50
+          absolute
+          left-0
+          top-0
+          right-0
+          duration-150
+          opacity-0
+          pointer-events-none
+        "
+      >
+        <div
+          class="
+            w-[90%]
+            lg:w-[60%]
+            p-4
+            bg-secondary
+            rounded-lg
+            fixed
+            left-[0]
+            right-[0]
+            top-[20vh]
+            m-auto
+          "
+        >
+          <p class="text-4xl text-center my-3 font-extrabold">Login</p>
+
+          <div class="my-4">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              class="
+                w-full
+                border-gray-400 border-2
+                h-[50px]
+                mt-1
+                rounded-lg
+                focus:ring-primary focus:border-primary
+              "
+            />
+          </div>
+
+          <div class="my-4">
+            <label for="username">Password</label>
+            <input
+              type="password"
+              class="
+                w-full
+                border-gray-400 border-2
+                h-[50px]
+                mt-1
+                rounded-lg
+                focus:ring-primary focus:border-primary
+              "
+            />
+          </div>
+
+          <div class="my-4">
+            <label for="region">Region</label>
+            <select
+              name="Reg"
+              id="region"
+              class="
+                w-full
+                border-gray-400 border-2
+                h-[50px]
+                mt-1
+                rounded-lg
+                focus:ring-primary focus:border-primary
+              "
+            >
+              <option value="tw">Taiwan</option>
+              <option value="jp">Japan</option>
+              <option value="ch">China</option>
+              <option value="ua">America</option>
+            </select>
+          </div>
+
+          <div class="my-4">
+            <input
+              id="rememberUs"
+              type="checkbox"
+              class="focus:text-primary focus:ring-primary"
+            />
+            <label for="rememberUs">Remember My Username</label>
+          </div>
+          <button
+            id="closeBtn"
+            class="
+              py-3
+              bg-primary
+              w-full
+              mt-4
+              rounded-lg
+              text-lg text-white
+              tracking-widest
+            "
+          >
+            關閉
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
